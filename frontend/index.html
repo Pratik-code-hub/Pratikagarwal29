@@ -1,0 +1,522 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pratik Kumar — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* neon-ppr underline */
+    .neon-underline {
+      position: relative;
+    }
+    .neon-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #06b6d4, #8b5cf6, #f472b6);
+      border-radius: 9999px;
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.7);
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.55);
+    }
+    .video-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% -10%, rgba(139, 92, 246, 0.35), transparent 40%),
+                  radial-gradient(ellipse at 80% 120%, rgba(6, 182, 212, 0.35), transparent 35%),
+                  linear-gradient(180deg, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.85));
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- NAV -->
+    <header classgallery-img w-full h-60 object-cover rounded-lg cursor-pointer backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <a href="#" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl">
+            <img src="assets/123 - Copy.jpg" alt="Logo" class="w-full h-full object-cover rounded-xl" />
+          </div>
+          <span class="font-semibold">Pratik Kumar</span>
+        </a>
+        <nav class="hidden md:flex gap-6 text-slate-300">
+          <a class="hover:text-white" href="#projects">Projects</a>
+          <a class="hover:text-white" href="#video">Video</a>
+          <a class="hover:text-white" href="#certs">Certificates</a>
+          <a class="hover:text-white" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+  <div class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 items-center gap-8 p-8">
+    
+    <!-- ✅ Left Side: Photo in a structured block -->
+    <div class="flex justify-center md:justify-end">
+      <div class="relative w-80 h-80 md:w-[28rem] md:h-[32rem] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800">
+  <img src="assets/343.jpg" alt="My Photo" class="w-full h-full object-cover" />
+</div>
+
+    </div>
+
+    <!-- ✅ Right Side: Text Content -->
+    <div class="p-4 sm:p-8 lg:p-12">
+      <h1 class="neon-underline text-5xl font-extrabold leading-tight">
+        Pratik<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-500 to-pink-500">
+          Kumar
+        </span>
+      </h1>
+      <p class="mt-4 max-w-prose text-slate-300">
+        AI/ML student building intelligent, beautiful products. Explore interactive demos,
+        real projects, and certified skills — all in one place.
+      </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 px-5 py-3 font-medium shadow-xl shadow-cyan-500/20">Explore Work</a>
+            <a href="#video" class="rounded-xl border border-white/15 px-5 py-3 font-medium">Play Video</a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 gap-4">
+            <div class="glass rounded-2xl p-4 text-center">
+              <div id="counter-projects" class="text-3xl font-extrabold">0</div>
+              <div class="text-xs text-slate-400">Project Likes</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div id="counter-certs" class="text-3xl font-extrabold">0</div>
+              <div class="text-xs text-slate-400">Certificate Likes</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div id="counter-total" class="text-3xl font-extrabold">0</div>
+              <div class="text-xs text-slate-400">Total Likes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO BACKGROUND SHOWCASE -->
+    <section id="video" class="relative video-bg mt-10 h-[60vh] w-full overflow-hidden rounded-none sm:rounded-3xl">
+      <video id="bgVideo" class="absolute inset-0 h-full w-full object-cover" autoplay muted loop playsinline poster="./assets/hero.jpg">
+        <source src="./assets/my IBM Project Video .mp4" type="video/mp4" />
+      </video>
+      <div class="relative z-10 flex h-full items-center justify-center p-6">
+        <div class="glass max-w-3xl rounded-3xl border border-white/10 p-8 text-center">
+          <h2 class="text-3xl font-bold"></h2>
+          <p class="mt-2 text-slate-300">IBM Project Showcase <!-- <code>assets/bg-video.mp4</code>.--> </p>
+          <button id="toggleVideo" class="mt-4 rounded-xl bg-white/10 px-5 py-2 text-sm hover:bg-white/20">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mx-auto mt-16 max-w-7xl px-4">
+      <div class="flex items-end justify-between">
+        <h2 class="neon-underline text-3xl font-bold">Projects</h2>
+        <a class="text-sm text-slate-400 hover:text-white" href="#certs">Go to Certificates →</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- Card 1 -->
+<article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+  <img src="assets/projects/youtube.png" class="h-40 w-full object-cover" alt="Youtube Comment Spam Detector" />
+  
+  <div class="p-5">
+    <h3 class="text-xl font-semibold">Youtube Comment Spam Detector</h3>
+    <p class="mt-2 text-sm text-slate-300">Fast, accurate, and explainable spam detector.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <button data-like="project:youtube"
+        class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">
+        ♥ Like
+      </button>
+      <div class="text-sm text-slate-300">Likes: <span id="like-project:youtube">0</span></div>
+    </div>
+  </div>
+</article>
+
+        <!-- Card 2 -->
+        <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+  <img src="assets/projects/concurrency control.png" class="h-40 w-full object-cover" alt="Concurrency Control and Transaction Management" />
+  
+  <div class="p-5">
+    <h3 class="text-xl font-semibold">Concurrency Control and Transaction Management</h3>
+    <p class="mt-2 text-sm text-slate-300">Managing multiple transactions without conflict.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <button data-like="project:cctm"
+        class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">
+        ♥ Like
+      </button>
+      <div class="text-sm text-slate-300">Likes: <span id="like-project:cctm">0</span></div>
+    </div>
+  </div>
+</article>
+        <!-- Card 3 -->
+        <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+  <img src="./assets/123 - Copy.jpg" class="h-40 w-full object-cover" alt="Personalized Product Recommendations" />
+  
+  <div class="p-5">
+    <h3 class="text-xl font-semibold">Personalized Product Recommendations</h3>
+    <p class="mt-2 text-sm text-slate-300">AI that knows what you’ll love next.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <button data-like="project:ppr"
+        class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">
+        ♥ Like
+      </button>
+      <div class="text-sm text-slate-300">Likes: <span id="like-project:ppr">0</span></div>
+    </div>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+ <section id="certs" class="mx-auto mt-16 max-w-7xl px-4">
+  <h2 class="neon-underline text-3xl font-bold">Certificates</h2>
+
+  <!-- Marquee Container -->
+  <div class="relative mt-8 overflow-hidden w-full border border-white/5 rounded-xl">
+    <div id="marquee" class="flex gap-8">
+      
+      <!-- Certificates group (duplicated for continuous effect) -->
+      <div class="flex gap-8" id="marquee-content">
+
+        <!-- Certificate 1 -->
+   <article class="min-w-[400px] rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg">
+  <h3 class="text-2xl font-semibold">Advance Diploma in Computere Application.</h3>
+  <p class="mt-2 text-sm text-slate-300">G-Mind Institue of Computer Studies.</p>
+  <div class="mt-4">
+    <img src="assets/certificates/ADCA Certificate.jpg"
+         alt="Advance Diploma in Computere Application Certificate"
+         class="rounded-xl shadow-lg border border-white/10 cursor-pointer"
+         onclick="openModal(this.src)">
+  </div>
+  <div class="mt-4 flex items-center justify-between">
+    <!-- ✅ Fixed here -->
+    <button data-like="cert:dls" 
+      class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">♥ Like</button>
+    <div class="text-sm text-slate-300">Likes: <span id="like-cert:dls">0</span></div>
+  </div>
+</article>
+
+
+       <!-- Certificate 2 -->
+<article class="min-w-[400px] rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg">
+  <h3 class="text-2xl font-semibold">Green Olympaid for Youth.</h3>
+  <p class="mt-2 text-sm text-slate-300">Go4Youth an initiative by the Ministry of Education, Government of India, and Teri.</p>
+  <div class="mt-4">
+    <img src="assets/certificates/green olympaid.jpg"
+         alt="Python Certificate"
+         class="rounded-xl shadow-lg border border-white/10 cursor-pointer"
+         onclick="openModal(this.src)">
+  </div>
+  <div class="mt-4 flex items-center justify-between">
+    <!-- ✅ Use cert:tfd -->
+    <button data-like="cert:dls1" 
+      class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">♥ Like</button>
+    <div class="text-sm text-slate-300">Likes: <span id="like-cert:dls1">0</span></div>
+  </div>
+</article>
+
+<!-- Certificate 3 -->
+<article class="min-w-[400px] rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg">
+  <h3 class="text-2xl font-semibold">Certificate of Excellence in (WEB WEAVERS)</h3>
+  <p class="mt-2 text-sm text-slate-300">Competition at the 54th ISTE National Annual convention.</p>
+  <div class="mt-4">
+    <img src="assets/certificates/1st runnerup.png"
+         alt="Machine Learning Certificate"
+         class="rounded-xl shadow-lg border border-white/10 cursor-pointer"
+         onclick="openModal(this.src)">
+  </div>
+  <div class="mt-4 flex items-center justify-between">
+    <!-- ✅ Use cert:mlops -->
+    <button data-like="cert:dls2" 
+      class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">♥ Like</button>
+    <div class="text-sm text-slate-300">Likes: <span id="like-cert:dls2">0</span></div>
+  </div>
+</article>
+<!-- Certificate 4 -->
+<article class="min-w-[400px] rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg">
+  <h3 class="text-2xl font-semibold">Deloitte Technology Job Simulation</h3>
+  <p class="mt-2 text-sm text-slate-300">Virtual program </p>
+  <div class="mt-4">
+    <img src="assets/certificates/certification of deloitte_page-0001.jpg"
+         alt="Machine Learning Certificate"
+         class="rounded-xl shadow-lg border border-white/10 cursor-pointer"
+         onclick="openModal(this.src)">
+  </div>
+  <div class="mt-4 flex items-center justify-between">
+    <!-- ✅ Use cert:dls -->
+    <button data-like="cert:dls3" 
+      class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">♥ Like</button>
+    <div class="text-sm text-slate-300">Likes: <span id="like-cert:dls3">0</span></div>
+  </div>
+</article>
+<!-- Certificate 5 -->
+<article class="min-w-[400px] rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg">
+  <h3 class="text-2xl font-semibold">intern-Artificial Intelligence and Data Analytics</h3>
+  <p class="mt-2 text-sm text-slate-300">4-Week virtual internship focused on Green Skills (organized by AICTE, Shell India & Edunet Foundation under Skills4Future Program) </p>
+  <div class="mt-4">
+    <img src="assets/certificates/Pratik   Kumar_AICTE_Certificate_page-0001.jpg"
+         alt="Machine Learning Certificate"
+         class="rounded-xl shadow-lg border border-white/10 cursor-pointer"
+         onclick="openModal(this.src)">
+  </div>
+  <div class="mt-4 flex items-center justify-between">
+    <!-- ✅ Use cert:dls -->
+    <button data-like="cert:dls4" 
+      class="like-btn rounded-lg bg-white/10 px-3 py-1 text-sm hover:bg-white/20">♥ Like</button>
+    <div class="text-sm text-slate-300">Likes: <span id="like-cert:dls4">0</span></div>
+  </div>
+</article>
+
+
+      </div>
+
+      <!-- Duplicate content for infinite scroll -->
+      <div class="flex gap-8" id="marquee-content-duplicate"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal for certificate -->
+<div id="imgModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+  <span class="absolute top-5 right-8 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+  <img id="modalImg" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl border border-white/20">
+</div>
+
+    <br>
+
+
+
+<!-- Photos Section -->
+<section id="photos" class="py-16 bg-slate-900 text-white text-center">
+  <h2 class="text-3xl font-bold mb-6">My Photos</h2>
+
+  <!-- Button -->
+ <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl mx-auto mt-10">
+
+  <!-- Left: Open Gallery Button -->
+  <div class="flex-1 flex flex-col items-center justify-center bg-slate-700 p-6 rounded-xl">
+    <h3 class="text-2xl font-bold mb-4 text-white">Gallery</h3>
+    <p class="text-white text-center mb-4">Click below to open my photo gallery</p>
+    <button id="openGallery" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold">
+      📂 Open My Gallery
+    </button>
+  </div>
+
+  <!-- Right: Resume Block -->
+  <div class="flex-1 flex flex-col items-center justify-center bg-slate-700 p-6 rounded-xl">
+    <h3 class="text-2xl font-bold mb-4 text-white">Resume</h3>
+    <p class="text-white text-center mb-4">Click below to view my resume</p>
+    <a href="assets/New folder/Pratik Kumar (resume).pdf" target="_blank"
+       class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold">
+      📄 View Resume
+    </a>
+  </div>
+
+</div>
+
+  <!-- Gallery Modal -->
+<div id="galleryModal" class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center">
+  <div class="bg-slate-800 p-6 rounded-2xl max-w-5xl w-full h-[90vh] relative flex flex-col">
+    
+    <!-- Close Button -->
+    <button id="closeGallery"
+      class="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg z-[9999]">
+      ✖
+    </button>
+
+    <h3 class="text-2xl font-bold mb-4">My Photo Collection</h3>
+
+    <!-- Photos Grid (Scrollable) -->
+    <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 overflow-y-auto flex-1 pr-2">
+      
+      <!-- Example Photos -->
+      <img src="assets/New folder/IMG_20231031_144504_970.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/New folder/IMG_20231125_152003.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/New folder/IMG-20241115-WA0002.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/New folder/IMG-20250611-WA0064.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/123 - Copy.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/2nd position.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/WhatsApp Image 2025-02-14 at 06.28.04_0ad0357b.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/New folder/Screenshot_2024-05-26-09-51-27-519_org.telegram.messenger.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+      <img src="assets/New folder/with teacherrs.jpg" class="gallery-img w-full h-60 object-cover rounded-lg cursor-pointer" />
+
+        </div>
+      </div>
+
+<!-- Right: Resume Downloader
+<div class="w-full md:w-64 flex flex-col items-center justify-start bg-slate-700 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold text-white mb-4">Download Resume</h3>
+      <a href="assets/resume.pdf" download
+         class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+        Download Resume
+      </a>
+    </div>
+    
+
+    
+      
+      <div class="w-full md:w-72 flex-shrink-0 flex flex-col items-center justify-center bg-slate-700 p-4 rounded-lg mt-4 md:mt-0">
+        <h3 class="text-xl font-semibold text-white mb-4">Download Resume</h3>
+        <a href="assets/resume.pdf" download
+           class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+          Download Resume
+        </a>
+      </div> 
+      
+      -->
+
+    </div>
+
+</section>
+
+
+<!-- Fullscreen Photo Viewer -->
+<div id="fullscreenViewer"
+  class="fixed inset-0 bg-black/90 hidden z-50 flex items-center justify-center">
+  <!-- Close -->
+  <button id="closeViewer" class="absolute top-4 right-6 text-white text-3xl">✖</button>
+
+  <!-- Prev -->
+  <button id="prevPhoto"
+    class="absolute left-6 text-white text-4xl font-bold px-4 py-2 bg-black/40 rounded-full hover:bg-black/70">
+    ⏮
+  </button>
+
+  <img id="fullscreenImg" src="" class="max-h-[90%] max-w-[90%] rounded-xl shadow-2xl" />
+
+  <!-- Next -->
+  <button id="nextPhoto"
+    class="absolute right-6 text-white text-4xl font-bold px-4 py-2 bg-black/40 rounded-full hover:bg-black/70">
+    ⏭
+  </button>
+</div>
+
+
+    <!-- CONTACT -->
+
+    <!-- Font Awesome Include (in <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <section class="px-6 py-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Left: Get in Touch -->
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
+      <h3 class="text-xl font-semibold text-white">Get in touch</h3>
+
+<!-- Email -->
+<p class="mt-2 text-sm flex items-center text-slate-300">
+  <i class="fas fa-envelope text-blue-400 text-2xl mr-3"></i>
+  <a href="mailto:Pratikkumar207302@gmail.com" 
+     class="underline hover:text-blue-300">
+    Pratikkumar207302@gmail.com
+  </a>
+</p>
+
+      <!-- Location -->
+      <p class="mt-2 text-sm flex items-center text-slate-300">
+        <i class="fas fa-map-marker-alt text-red-400 mr-3 "></i>
+        Current Location: Ropar, Punjab (India)
+        <a href="googlemap.com" 
+     class="underline hover:text-blue-300">
+
+  </a>
+      </p>
+
+      <!-- Social Links -->
+      <div class="flex space-x-6 mt-4">
+        <!-- GitHub -->
+        <a href="https://github.com/yourusername" target="_blank" 
+           class="flex items-center space-x-2 text-slate-300 hover:text-white transition duration-300 hover:scale-110">
+          <i class="fab fa-github text-3xl"></i>
+          <span class="text-sm">GitHub</span>
+        </a>
+        <br>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/yourusername" target="_blank" 
+           class="flex items-center space-x-2 text-slate-300 hover:text-blue-400 transition duration-300 hover:scale-110">
+          <i class="fab fa-linkedin text-3xl"></i>
+          <span class="text-sm">LinkedIn</span>
+        </a>
+
+        
+      </div>
+<div class="mt-4 border border-white/20 rounded-xl overflow-hidden mx-auto aspect-[9/16] w-60"> 
+  <video controls autoplay loop muted class="w-full h-full object-cover rounded-xl">
+    <source src="assets/typing speed.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+    </div>
+
+    
+
+    <!-- Right: Contact Form -->
+
+<form id="contactForm" class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <label class="text-xs">Name
+    <input id="name" type="text" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none" />
+  </label>
+
+  <label class="text-xs mt-6 block">Email (If you want to connect with me, feel free to share your email or mobile number, and I’ll reach out. Otherwise, it’s completely optional.)
+    <input id="email" type="email" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none" />
+  </label>
+
+
+  <label class="text-xs">Mobile Number
+    <input id="mobile" type="tel" pattern="[0-9]{10}" placeholder="Enter 10-digit number" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none" />
+  </label>
+
+  <label class="text-xs mt-3 block">Message
+    <textarea id="message" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none" rows="4"></textarea>
+  </label>
+
+  <button type="submit" class="mt-4 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 px-4 py-2">Send</button>
+</form>
+
+  </div>
+</section>
+
+
+    <footer class="border-t border-white/10 py-6 text-center text-sm text-slate-400">© 2025 Pratik Kumar</footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let data = {
+      name: document.getElementById("name").value,
+      message: document.getElementById("message").value,
+      secret: "MY_SECRET_123" // 🔑 wahi secret key jo Apps Script me dala tha
+    };
+
+    let response = await fetch("https://script.google.com/macros/s/AKfycby7NTrxuEEjEjkOb_m36nHW-B89ox5b7pmvP-nBrfOOJWravNft38vPPPqClD0Y1VGo/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    let text = await response.text();
+    alert("Server response: " + text);
+  });
+</script>
